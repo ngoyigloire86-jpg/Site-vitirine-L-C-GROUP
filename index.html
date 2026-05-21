@@ -36,12 +36,21 @@
         h1, h2, h3, .navbar-brand { font-family: 'Outfit', sans-serif; }
 
         /* Navbar Mobile */
+         /* --- NAVBAR FIX (Empêche le saut du bouton) --- */
         .navbar {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid #eee;
             padding: 10px 0;
             width: 100%;
+        }
+        
+        /* Force la position gauche/droite immédiatement */
+        .navbar .container {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            flex-wrap: nowrap; /* Empêche le bouton de passer à la ligne */
         }
         .navbar-brand { font-weight: 800; font-size: 1.2rem; color: var(--blue-fb) !important; }
         .navbar .btn { font-size: 0.8rem; padding: 8px 15px !important; }
