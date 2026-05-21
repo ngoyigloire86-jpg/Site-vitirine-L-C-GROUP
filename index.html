@@ -163,6 +163,19 @@
         /* ============================================================
            AJOUTS RESPONSIVE (POUR LE 100% MOBILE-FRIENDLY)
            ============================================================ */
+        @media (max-width: 992px) {
+    .img-rounded {
+        /* On annule la hauteur fixe de 500px pour que l'image s'adapte à l'écran */
+        height: auto !important; 
+        
+        /* On change 'cover' par 'revert' ou 'unset' pour supprimer le zoom */
+        object-fit: contain; 
+        
+        /* Optionnel : si tu veux quand même une hauteur minimale sur tablette */
+        min-height: 250px; 
+    }
+}
+        
         @media (max-width: 991.98px) {
             .section-padding { padding: 60px 0; }
             .img-rounded { height: 350px; margin-bottom: 20px; }
